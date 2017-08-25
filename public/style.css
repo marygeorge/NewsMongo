@@ -1,0 +1,51 @@
+.jumbotron{
+    background-color: #ff9966;
+    height:10%;
+}
+
+.menuitem{
+    border-width: 0px;
+    background: transparent;
+    color:#ffc;
+    text-align: center;
+    font-weight: bold;
+    width:auto;
+}
+.menuitem:hover{
+    background-color: #ffc;
+    color:#000;
+    font-weight: bolder;
+}
+
+.mainImg{
+    position: absolute;
+    top: 24%;
+    left: 27%;
+    width:40%;
+    opacity: .6;
+}
+
+#StartBtn{
+    position: absolute;
+    top:90%;
+}
+
+.showData{
+    text-align: center;
+}
+.data{
+    position: absolute;
+    top:90%;
+    left: .5%; 
+    width: 99%;
+    background-color: #b3d1ff;
+}
+
+.dataRow{
+    border-style: ridge;
+    border-collapse: #ff6633;
+}
+
+article{
+   
+}
