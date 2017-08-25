@@ -10,6 +10,9 @@ var cheerio = require("cheerio");
 var app = express();
 app.use(express.static("public"));
 
+// GOK if this works
+const delay = require('delay');
+
 //handlebars
 // var exphbs = require("express-handlebars");
 // app.engine("handlebars", exphbs({ defaultLayout: "index" }));
@@ -68,14 +71,29 @@ app.get("/scrape", function(req, res){
         });
         console.log("Scrape done");
         //res.send(results);
+
+        delay(500)
+    .then(() => {
         Story.find(function (err, stories) {
             if (err) return console.error(err);
             console.log("ScrapeShow"+stories);
             res.send(stories);
         });
     });
+ 
+        
+    });
     
 });
+
+app.get("/getSaved", function(req, res){
+    savedStory.find(function (err, stories) {
+            if (err) return console.error(err);
+            console.log("ScrapeShow"+stories);
+            res.send(stories);
+        });
+});
+
 
 app.post("/storySave/:id", function(req, res){
 
